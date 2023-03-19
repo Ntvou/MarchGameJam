@@ -319,6 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 83706211}
+  animator: {fileID: 0}
   runSpeed: 12
 --- !u!114 &83706216
 MonoBehaviour:
@@ -350,6 +351,7 @@ GameObject:
   - component: {fileID: 385072534}
   - component: {fileID: 385072533}
   - component: {fileID: 385072536}
+  - component: {fileID: 385072537}
   m_Layer: 8
   m_Name: PlayerMale
   m_TagString: Untagged
@@ -418,7 +420,7 @@ Transform:
   m_GameObject: {fileID: 385072528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.549, y: -2.563, z: 0}
-  m_LocalScale: {x: -0.0890549, y: 0.089054905, z: 0.089054905}
+  m_LocalScale: {x: 0.0890549, y: 0.089054905, z: 0.089054905}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 615459081}
@@ -486,6 +488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 385072534}
+  animator: {fileID: 385072537}
   runSpeed: 14
 --- !u!114 &385072534
 MonoBehaviour:
@@ -545,6 +548,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 83706208}
   player2: {fileID: 385072528}
+--- !u!95 &385072537
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385072528}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a37448c6cdfa5d84daddc66672bc2f21, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
