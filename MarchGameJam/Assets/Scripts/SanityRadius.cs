@@ -6,28 +6,23 @@ public class SanityRadius : MonoBehaviour
 {
     public float radius = 5f;
     public float timeLimit = 10f;
-    public bool isControlledByPlayer;
 
     private float timer = 0f;
+    private bool isControlledByPlayer = false;
 
-    private PlayerDeath playerDeath;
     private PlayerMovement playerMovement;
     private PlayerScript playerScript;
 
     private void Start()
     {
-        // Get the PlayerDeath, PlayerMovement, and PlayerScript components from the same GameObject
-        playerDeath = GetComponent<PlayerDeath>();
+        // Get the PlayerMovement and PlayerScript components from the same GameObject
         playerMovement = GetComponent<PlayerMovement>();
         playerScript = GetComponent<PlayerScript>();
     }
 
     private void Update()
     {
-        if (isControlledByPlayer)
-        {
-            CheckSanity();
-        }
+        CheckSanity();
     }
 
     private void CheckSanity()
@@ -51,7 +46,7 @@ public class SanityRadius : MonoBehaviour
 
             if (timer >= timeLimit)
             {
-                Die();
+                DisableScripts();
             }
         }
         else
@@ -60,7 +55,7 @@ public class SanityRadius : MonoBehaviour
         }
     }
 
-    private void Die()
+    private void DisableScripts()
     {
         Debug.Log(gameObject.name + " died due to insanity.");
 
